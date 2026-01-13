@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(225, 225, 225);
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+    .box1 {
+      display: flex;
+      flex-direction: column;
+      width: 1000px;
+      height: 655px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 20px;
+      border: 1px solid black;
+    }
+    .box2 {
+      width: 300px;
+      height: 655px;
+      background-color: white;
+      border-radius: 20px;
+      border: 1px solid black;
+    }
+    .categories {
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      border-radius: 25px;
+      border: 1px solid black;
+      width: 150px;
+      height: 40px;
+    }
+    .line {
+      display: flex;
+      border-bottom: 1px solid rgb(81, 81, 81);
+      height: 80px;
+    }
+    .pinkbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 950px;
+      height: 400px;
+      margin-top: 25px;
+      margin-left: 25px;
+      background-color: rgb(255, 113, 222);
+      border-radius: 20px;
+      border: 2px solid black;
+    }
+
+    /* Responsive rules for small screens */
+    @media screen and (max-width: 600px) {
+      body {
+        align-items: flex-start;
+        padding: 20px;
+      }
+      .container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+      .box1 {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .box2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        padding: 12px;
+      }
+      .pinkbox {
+        width:auto;
+        height: auto;
+        margin-left: 0;
+        margin-top: 15px;
+        padding: 16px;
+        align-items: flex-start;
+      }
+      .categories {
+        width: auto;
+        margin: 8px !important;
+        height: 36px;
+        gap: 8px;
+      }
+      /* ensure any .categories with inline margin-left is reset on small screens */
+      .line .categories {
+        margin-left: 0 !important;
+      }
+      .line {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 8px;
+        border-bottom: none;
+      }
+      .sary {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+      }
+      .bottom {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+      }
+      .pinkbox h1 {
+        font-size: 28px !important;
+        margin-top: 16px !important;
+      }
+      .pinkbox p {
+        font-size: 16px !important;
+      }
+
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div style="display: flex; flex-direction: row; justify-content: space-around;" class="line">
+          <div class="categories">
+            <p>All Caregories</p>
+            <img style="width: 13px; height: 15px" src="narrow.png" alt="" />
+          </div>
+          <p style="margin-top: 30px">Hide Mastered</p>
+          <div style="display: flex; margin-left: 530px" class="categories">
+            <p>Shuffle</p>
+          </div>
+        </div>
+        <div class="pinkbox">
+          <p class="web"
+            style="
+              background-color: white;
+              border-radius: 15px;
+              border: 1px solid black;
+              width: 170px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 4px;
+            "
+          >
+            Web Development
+          </p>
+          <h1
+            style="
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: 900;
+              font-size: 45px;
+              margin-top: 80px;
+            "
+          >
+            What does HTML stand for?
+          </h1>
+          <p
+            style="
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                sans-serif;
+              font-size: 20px;
+              margin-top: -10px;
+            "
+          >
+            Click to reveal answer
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              gap: 15px;
+              margin-top: 80px;
+            "
+            class="nol"
+          >
+            <span
+              style="
+                width: 79px;
+                height: 9px;
+                border-radius: 5px;
+                border: 1px solid black;
+                color: white;
+                background-color: white;
+                font-size: 1px;
+              "
+              >l</span
+            >
+            <p style="font-size: 10px">0/5</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-around;" class="row">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 7px;
+            background-color: rgb(255, 179, 0);
+            border-radius: 30px;
+            border: 1px solid black;
+            width: 130px;
+            height: 30px;
+            justify-content: center;
+            margin-top: 10px;
+            
+          "
+          class="sary"
+        >
+          <img style="width: 15px; height: 15px" src="galochka.png" alt="" />
+          <p>I Know This</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            border: 1px solid black;
+            width: 155px;
+            height: 30px;
+            justify-content: center;
+            margin-top: 10px;
+          "
+          class="sary"
+        >
+          <img style="width: 15px; height: 15px" src="reset.png" alt="" />
+          <p>Reset Progress</p>
+        </div>
+    </div>
+        <div
+          style="
+            border-top: 1px solid black;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          "
+          class="bottom"
+        >
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 7px;
+              background-color: rgb(255, 255, 255);
+              border-radius: 30px;
+              border: 1px solid black;
+              width: 125px;
+              height: 40px;
+              justify-content: center;
+              margin-top: 15px;
+              margin-left: 10px;
+            "
+            class="sary"
+          >
+            <img
+              style="width: 15px; height: 15px"
+              src="images-removebg-preview.png"
+              alt=""
+            />
+            <p style="font-size: 17px">Previous</p>
+          </div>
+          <p style="color: gray">Card 1 of 40</p>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 7px;
+              background-color: rgb(255, 255, 255);
+              border-radius: 30px;
+              border: 1px solid black;
+              width: 125px;
+              height: 40px;
+              justify-content: center;
+              margin-top: 15px;
+              margin-right: 20px;
+            "
+            class="sary"
+          >
+            <p style="font-size: 17px">Next</p>
+            <img
+              style="width: 15px; height: 15px"
+              src="images-removebg-preview.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="box2">
+        <h1 style="font-weight: bold; font-size: 25px; margin-left: 20px">
+          Study Statistics
+        </h1>
+        <div
+          style="
+            border-radius: 20px;
+            border: 1px solid black;
+            display: flex;
+            width: 260px;
+            margin-left: 20px;
+          "
+          class="minbox1"
+        >
+          <div class="left">
+            <p style="margin-left: 15px">Total Cards</p>
+            <h1 style="margin-left: 15px">40</h1>
+          </div>
+          <div
+            style="
+              width: 100px;
+              background-color: rgb(131, 131, 215);
+              border-left: 1px solid black;
+              padding: 0;
+              border-radius: 0 20px 20px 0;
+              margin-left: 63px;
+            "
+            class="right"
+          ></div>
+        </div>
+        <div
+          style="
+            border-radius: 20px;
+            border: 1px solid black;
+            display: flex;
+            width: 260px;
+            margin-left: 20px;
+            margin-top: 20px;
+          "
+          class="minbox1"
+        >
+          <div class="left">
+            <p style="margin-left: 15px">Mastered</p>
+            <h1 style="margin-left: 15px">11</h1>
+          </div>
+          <div
+            style="
+              width: 100px;
+              background-color: rgb(134, 221, 227);
+              border-left: 1px solid black;
+              padding: 0;
+              border-radius: 0 20px 20px 0;
+              margin-left: 78px;
+            "
+            class="right"
+          ></div>
+        </div>
+        <div
+          style="
+            border-radius: 20px;
+            border: 1px solid black;
+            display: flex;
+            width: 260px;
+            margin-left: 20px;
+            margin-top: 20px;
+          "
+          class="minbox1"
+        >
+          <div class="left">
+            <p style="margin-left: 13px">In Progress</p>
+            <h1 style="margin-left: 15px">21</h1>
+          </div>
+          <div
+            style="
+              width: 100px;
+              background-color: rgb(199, 89, 175);
+              border-left: 1px solid black;
+              padding: 0;
+              border-radius: 0 20px 20px 0;
+              margin-left: 64px;
+            "
+            class="right"
+          ></div>
+        </div>
+        <div
+          style="
+            border-radius: 20px;
+            border: 1px solid black;
+            display: flex;
+            width: 260px;
+            margin-left: 20px;
+            margin-top: 20px;
+          "
+          class="minbox1"
+        >
+          <div class="left">
+            <p style="margin-left: 15px">Not Started</p>
+            <h1 style="margin-left: 15px">8</h1>
+          </div>
+          <div
+            style="
+              width: 100px;
+              background-color: rgb(249, 96, 231);
+              border-left: 1px solid black;
+              padding: 0;
+              border-radius: 0 20px 20px 0;
+              margin-left: 63px;
+            "
+            class="right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
